@@ -1,0 +1,61 @@
+create table posts(
+
+	id int(10) not null PRIMARY KEY AUTO_INCREMENT, 
+    subject varchar(120) not null,
+    content varchar(1000) not null,
+    date datetime not null
+);
+
+///////////////////////insert//////////////////////////
+
+insert into posts(subject, content, date) 
+VALUES('This is the subject',' jhf djh  dkjhfk dfja dffkj jakfdf kj ffkk akfdfjakd', 
+'2015-02-06 16:30:45');
+
+//////eg2 insert///////////
+INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) 
+VALUES ('Daniel', 'Nielsen', 'mtuts@gmail.com', 'Admin', 'test123');
+
+INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) 
+VALUES ('jim', 'mae', 'jimmae@gmail.com', 'jame', 'test124');
+
+/////////////////////select///////////////////////////
+
+select subject from posts;
+select * FROM `posts` WHERE id='1';
+select * from `posts` WHERE id='1' AND subject='this is the subject'
+
+////////////////////////update///////////
+
+UPDATE posts
+SET subjects='This is a test', content='This is the content'
+WHERE id='1'
+
+///////////////delete////////////////////////////////
+DELETE FROM posts 
+WHERE id='1'
+
+///////////////ordering/////////////////////////////
+SELECT * FROM `posts` ORDER BY id ASC
+SELECT * FROM `posts` ORDER BY id DESC
+SELECT * FROM `posts` ORDER BY subject ASC
+////////////////////tutorial////////////////////////////
+index==practice.php
+includes/dbh.inc.php==config.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
